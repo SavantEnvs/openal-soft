@@ -1,0 +1,9 @@
+project: savantenvs/openal-soft
+target: fuzz_attrs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_attrs/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_attrs
+    libfuzzer: true
+    timeout: 10

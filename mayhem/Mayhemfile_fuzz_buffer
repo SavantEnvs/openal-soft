@@ -1,0 +1,9 @@
+project: savantenvs/openal-soft
+target: fuzz_buffer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_buffer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_buffer
+    libfuzzer: true
+    timeout: 10
